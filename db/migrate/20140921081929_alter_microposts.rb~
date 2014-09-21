@@ -1,0 +1,11 @@
+class AlterMicroposts < ActiveRecord::Migration
+  def change
+  end
+  def up
+	rename_column("microposts",'use_id','user_id')
+  end
+
+  def down
+	rename_column("microposts",'user_id','use_id')
+  end
+end
